@@ -66,7 +66,7 @@ def combine(safeFile,unsafeFile,unsafeYFile):
 		y_oh[labels.index(label)] = 1
 		return y_oh
 
-	y = np.concatenate((np.array([tran_label(i.strip()) for i in unsafe_labels]), np.array([tran_label("safe") for i in safe_tokens])))
+	y = np.concatenate((np.array([tran_label(i.strip()) for i in unsafe_tokens]), np.array([tran_label("safe") for i in safe_tokens])))
 	return combined,y
 
 
